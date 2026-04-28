@@ -1,0 +1,37 @@
+@reference "./index.css";
+
+/* Custom Earthy Tones and Theme Variables */
+:root {
+  --primary: oklch(0.55 0.18 35) !important;
+  --primary-foreground: oklch(0.98 0 0) !important;
+  --secondary: oklch(0.7 0.15 75) !important;
+  --secondary-foreground: oklch(0.2 0.02 20) !important;
+  --accent: oklch(0.5 0.12 165) !important;
+  --accent-foreground: oklch(0.98 0 0) !important;
+  --background: oklch(0.99 0.01 60) !important;
+  --foreground: oklch(0.2 0.02 20) !important;
+  --radius: 0.75rem !important;
+}
+
+.dark {
+  --background: oklch(0.12 0.02 20) !important;
+  --foreground: oklch(0.95 0.01 60) !important;
+  --primary: oklch(0.6 0.18 35) !important;
+  --border: oklch(0.25 0.02 20) !important;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-black;
+  }
+}
+
+/* Accessibility Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
